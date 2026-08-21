@@ -9,7 +9,7 @@ export async function fetchVisitorCount30d(): Promise<number> {
   const end = new Date()
   const start = new Date(end.getTime() - 30 * DAY_MS)
   const url = `${SITE}/counter/TOTAL.json?start=${toDateParam(start)}&end=${toDateParam(end)}`
-  const res = await fetch(url)
+  const res = await fetch(url, { cache: 'no-store' })
   if (!res.ok) throw new Error('Failed to fetch visitor count')
   const data: { count: string } = await res.json()
   return parseInt(data.count.replace(/,/g, ''), 10)
