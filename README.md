@@ -15,12 +15,14 @@ It's a static, client-only React app — no backend, no server-side database. Al
 - **Filters & sorting** — by store, price ceiling, Big Deals Only, Highly Rated Only, and multiple sort orders.
 - **Dark/light theme.**
 - **Visitor counter** — a rolling 30-day visitor count shown in the header.
+- **Installable as a web app (PWA)** — add it to your phone's home screen from the browser's "Install"/"Add to Home Screen" option for an app-like, standalone experience.
 
 ## Tech stack
 
 - [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vite.dev/) (build tool/dev server)
 - [Tailwind CSS v4](https://tailwindcss.com/)
+- [vite-plugin-pwa](https://vite-pwa-org.netlify.app/) (installable web app manifest + service worker)
 - No backend — all state is client-side, persisted to `localStorage`.
 
 ## APIs used
